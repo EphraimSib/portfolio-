@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    /* Hide all sections except the profile picture and contact information by default */
+    .content section {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- First Page -->
+  <header>
+    <div class="profile-pic">
+      <img src="1.jpg" alt="Ephraim Sibale">
+    </div>
+    <h1>Ephraim sibale</h1>
+    <p>Contact Information:</p>
+    <ul>
+      <li>Email: <a href="mailto:johndoe@example.com">ephraimsibale20@gmail.com</a></li>
+      <li>Phone: +265[0]884042160</li>
+      <li>LinkedIn: <a href="https://www.linkedin.com/in/ephraim-sibale-972344247">Ephraim sibale</a></li>
+    </ul>
+  </header>
+
+  <!-- Side Menu and Content -->
+  <div class="container">
+    <aside class="side-menu">
+      <ul>
+        <li><a href="#education" onclick="showSection('education')">Education</a></li>
+        <li><a href="#skills" onclick="showSection('skills')">Skills</a></li>
+        <li><a href="#soft-skills" onclick="showSection('soft-skills')">Soft Skills</a></li>
+        <li><a href="#experience" onclick="showSection('experience')">Experience</a></li>
+        <li><a href="#achievements" onclick="showSection('achievements')">Achievements</a></li>
+      </ul>
+    </aside>
+    <main class="content">
+      <section id="education">
+        <h2>Education</h2>
+        <p>Diploma in IT, system support , Malawi university of Business and applied science.</p>
+      </section>
+      <section id="skills">
+        <h2>Skills</h2>
+        <h3>Technical Skills</h3>
+        <p>Programming languages: python, html , css , javascript, Bash </p>
+        <p>Software proficiency: kali linux, </p>
+        <p>Networking protocols: ipv3 , ipv4 , ipv6</p>
+      </section>
+      <section id="soft-skills">
+        <h2>Soft Skills</h2>
+        <p>Communication</p>
+        <p>Teamwork</p>
+        <p>Problem-solving</p>
+        <p>Data clerk</p>
+        <p>Intermediate skills in personal computer operation in Microsoft Word and Excel.</p>
+        <p>Professional, Ambitious and accountable</p>
+      </section>
+      <section id="experience">
+        <h2>Experience</h2>
+        <p>worked with ITECH malawi in 2022 from november to march and SAIMFUR in 2023 to 2024 till january.</p>
+        <p>Setting IT goals for an organization and implementing plans to meet them,Researching new technologies and possible upgrades,Overseeing computer-related activities and staff members.</p>
+      </section>
+      <section id="achievements">
+        <h2>Achievements</h2>
+        <p>Resolving critical system outages promptly,Creating user-friendly documentation for common issues,Ensuring compliance with data privacy regulations,Launching a successful e-commerce platform,Implementing a disaster recovery plan for critical databases,Successfully implementing a cloud migration strategy,Improving network security protocols, Leading a team in developing a custom software solution. </p>
+        <p>I am a professional young man, experienced in computing, configuring network, maintain ICT equipment’s, customer support services, configuring software and Coding as well as Scripting. Extremely passionate about what I do. I am seeking a challenging position in a professional organization where I would be able to enhance my skills and experience whilst at the same time contributing to the achievement of the company’s goals and objectives.</p>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function showSection(sectionId) {
+      // Hide all sections
+      document.querySelectorAll('.content section').forEach(section => {
+        section.style.display = 'none';
+      });
+
+      // Show the selected section
+      document.getElementById(sectionId).style.display = 'block';
+    }
+  </script>
+</body>
+</html>
