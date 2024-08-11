@@ -6,19 +6,11 @@
     <title>Computer Engineering Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Computer Engineering Portfolio</title>
-<link rel="stylesheet" href="style.css">
-<style>
-
- </style>
-</body>
+<body>
     <header>
         <div class="container">
             <nav>
-                <a href="#" class="logo">Ephraim Sibale</a>
+                <a href="#" class="logo" id="logo-link">Ephraim Sibale</a>
                 <ul>
                     <li><a href="#" id="home-link">Home</a></li>
                     <li><a href="#" id="projects-link">Projects</a></li>
@@ -35,41 +27,34 @@
         <div class="container">
             <h1>Computer Science</h1>
             <p>Passionate about building innovative software solutions and pushing the boundaries of technology.</p>
-            <a href="#" class="btn">Get to Know Me</a>
-            <a href="#" class="btn">Browse Projects</a>
+            <a href="#" class="btn" id="get-to-know-me">Get to Know Me</a>
+            <a href="#" class="btn" id="browse-projects">Browse Projects</a>
+            <a href="#" class="btn" id="home-btn">About</a>
         </div>
     </section>
-<!-- ... (rest of the HTML code remains the same) ... -->
 
-<section class="projects" id="projects-section" style="display: none;">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="project-grid">
-        <div class="project-slide">
-          <img src="20.jpg" alt="Project 1">
-          <h3>Intergration with AI</h3>
-          <p>Web Search Optimization, AI-powered SEO tools that improve website visibility.</p>
+    <section class="projects" id="projects-section" style="display: none;">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project-slide active">
+                    <img src="20.jpg" alt="Project 1">
+                    <h3>Integration with AI</h3>
+                    <p>Web Search Optimization, AI-powered SEO tools that improve website visibility.</p>
+                </div>
+                <div class="project-slide">
+                    <img src="25.png" alt="Project 2">
+                    <h3>Digital Transformation</h3>
+                    <p>Cloud Computing: Enabling scalable, on-demand access to computing resources and storage.</p>
+                </div>
+                <div class="project-slide">
+                    <img src="30.png" alt="Project 3">
+                    <h3>IT Project Management</h3>
+                    <p>Resource Allocation Software: Optimize team utilization and workload management.</p>
+                </div>
+            </div>
         </div>
-        <div class="project-slide">
-          <img src="25.png" alt="Project 2">
-          <h3>Digital Transformation</h3>
-          <p>Cloud Computing: Enabling scalable, on-demand access to computing resources and storage.</p>
-        </div>
-        <div class="project-slide">
-          <img src="30.png" alt="Project 3">
-          <h3>IT Project management</h3>
-          <p>Resource Allocation Software (e.g., Resource Guru, Float): Optimize team utilization and workload management.</p>
-        </div>
-      </div>
-      <div class="project-nav">
-        <button class="prev" id="prev-btn">Prev</button>
-        <button class="next" id="next-btn">Next</button>
-      </div>
-    </div>
-  </section>
-  
-  <!-- ... (rest of the HTML code remains the same) ... -->
-   
+    </section>
 
     <section class="about" id="about-section" style="display: none;">
         <div class="container">
@@ -79,18 +64,18 @@
                     <h3>Software Engineer</h3>
                     <span>SAIMFUR FREIGHT | May 2022 - March 2023</span>
                     <ul>
-                        <li>Developed and implemented a softwares using Visual Studio, Eclipse, IntelliJ IDEA and NetBeans.</li>
-                        <li>Optimized Database queries,Server configuration and Network protocols for improved performance and scalability.</li>
-                        <li>Collaborated with a team of engineers to design and deploy Cloud-based, Cybersecurity threat detection system.</li>
+                        <li>Developed and implemented software using various IDEs.</li>
+                        <li>Optimized Database queries and Server configuration.</li>
+                        <li>Collaborated to design and deploy Cloud-based systems.</li>
                     </ul>
                 </div>
                 <div class="experience-item">
                     <h3>Internship</h3>
                     <span>ITECH SOLUTIONS | June 2023 - August 2024</span>
                     <ul>
-                        <li>Gained practical experience in Computer Vision,Natural Language Processing and Network Administration .</li>
-                        <li>Assisted with the development and testing of E-commerce website and Customer relationship management (CRM) system.</li>
-                        <li>Learned about Agile development methodologies (e.g., Scrum, Kanban) and Software architecture patterns (e.g., Microservices,Monolithic).</li>
+                        <li>Gained practical experience in Computer Vision.</li>
+                        <li>Assisted with the development of an E-commerce website.</li>
+                        <li>Learned about Agile development methodologies.</li>
                     </ul>
                 </div>
             </div>
@@ -111,7 +96,7 @@
                         <li>Agile Methodologies</li>
                         <li>Software Design Patterns</li>
                         <li>Version Control (Git)</li>
-                         <li>Database Management</li>
+                        <li>Database Management</li>
                     </ul>
                 </div>
                 <div class="skill-group">
@@ -135,80 +120,59 @@
             </div>
         </div>
     </section>
-
     <footer>
         <div class="container">
             <p>&copy; 2024 Ephraim Sibale. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <script>
+        const homeLink = document.getElementById('home-link');
+        const projectsLink = document.getElementById('projects-link');
+        const aboutLink = document.getElementById('about-link');
+        const homeSection = document.getElementById('home-section');
+        const projectsSection = document.getElementById('projects-section');
+        const aboutSection = document.getElementById('about-section');
+
+        homeLink.addEventListener('click', () => {
+            homeSection.style.display = 'block';
+            projectsSection.style.display = 'none';
+            aboutSection.style.display = 'none';
+        });
+
+        projectsLink.addEventListener('click', () => {
+            homeSection.style.display = 'none';
+            projectsSection.style.display = 'block';
+            aboutSection.style.display = 'none';
+        });
+
+        aboutLink.addEventListener('click', () => {
+            homeSection.style.display = 'none';
+            projectsSection.style.display = 'none';
+            aboutSection.style.display = 'block';
+        });
+
+        let currentSlide = 0;
+        const projectSlides = document.querySelectorAll('.project-slide');
+
+        function updateSlideshow() {
+            projectSlides.forEach((slide, index) => {
+                slide.classList.remove('active');
+                if (index === currentSlide) {
+                    slide.classList.add('active');
+                }
+            });
+        }
+
+        function autoSlide() {
+            currentSlide = (currentSlide + 1) % projectSlides.length;
+            updateSlideshow();
+        }
+
+        setInterval(autoSlide, 3000); // Change slide every 3 seconds
+
+        // Initialize slideshow
+        updateSlideshow();
+    </script>
 </body>
 </html>
-<script>
-    // Get the links and sections
-    const homeLink = document.getElementById('home-link');
-    const projectsLink = document.getElementById('projects-link');
-    const aboutLink = document.getElementById('about-link');
-    const homeSection = document.getElementById('home-section');
-    const projectsSection = document.getElementById('projects-section');
-    const aboutSection = document.getElementById('about-section');
-
-    // Add event listeners to the links
-    homeLink.addEventListener('click', () => {
-        homeSection.style.display = 'block';
-        projectsSection.style.display = 'none';
-        aboutSection.style.display = 'none';
-    });
-
-    projectsLink.addEventListener('click', () => {
-        homeSection.style.display = 'none';
-        projectsSection.style.display = 'block';
-        aboutSection.style.display = 'none';
-    });
-
-    aboutLink.addEventListener('click', () => {
-        homeSection.style.display = 'none';
-        projectsSection.style.display = 'none';
-        aboutSection.style.display = 'block';
-    });
-
-// Add slideshow functionality
-const projectSlides = document.querySelectorAll('.project-slide');
-const prevBtn = document.getElementById('prev-btn');
-const nextBtn = document.getElementById('next-btn');
-
-let currentSlide = 0;
-
-prevBtn.addEventListener('click', () => {
-  currentSlide--;
-  if (currentSlide < 0) {
-    currentSlide = projectSlides.length - 1;
-  }
-  updateSlideshow();
-});
-
-nextBtn.addEventListener('click', () => {
-  currentSlide++;
-  if (currentSlide >= projectSlides.length) {
-    currentSlide = 0;
-  }
-  updateSlideshow();
-});
-
-function updateSlideshow() {
-  projectSlides.forEach((slide, index) => {
-    if (index === currentSlide) {
-      slide.classList.add('active');
-    } else {
-      slide.classList.remove('active');
-    }
-  });
-}
-
-// Initialize slideshow
-updateSlideshow();
-</script>
-
-
-
-
-
